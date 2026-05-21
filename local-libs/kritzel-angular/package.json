@@ -1,0 +1,25 @@
+{
+  "name": "kritzel-angular",
+  "version": "0.3.7",
+  "peerDependencies": {
+    "@angular/common": "^19.0.0 || ^20.0.0 || ^21.0.0",
+    "@angular/core": "^19.0.0 || ^20.0.0 || ^21.0.0",
+    "kritzel-stencil": "^0.3.7"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "module": "fesm2022/kritzel-angular.mjs",
+  "typings": "types/kritzel-angular.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./types/kritzel-angular.d.ts",
+      "default": "./fesm2022/kritzel-angular.mjs"
+    }
+  },
+  "type": "module"
+}

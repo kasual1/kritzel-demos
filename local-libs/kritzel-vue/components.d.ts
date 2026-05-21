@@ -1,0 +1,17 @@
+import { type StencilVueComponent } from '@stencil/vue-output-target/runtime';
+import type { JSX } from '../../kritzel-stencil/dist/components';
+export declare const KritzelAwarenessCursors: StencilVueComponent<JSX.KritzelAwarenessCursors>;
+export declare const KritzelBackToContent: StencilVueComponent<JSX.KritzelBackToContent>;
+export declare const KritzelButton: StencilVueComponent<JSX.KritzelButton>;
+export declare const KritzelCurrentUserDialog: StencilVueComponent<JSX.KritzelCurrentUserDialog>;
+export declare const KritzelDialog: StencilVueComponent<JSX.KritzelDialog>;
+export declare const KritzelEditor: StencilVueComponent<JSX.KritzelEditor>;
+export declare const KritzelExport: StencilVueComponent<JSX.KritzelExport>;
+export declare const KritzelInput: StencilVueComponent<JSX.KritzelInput>;
+export declare const KritzelLineEndings: StencilVueComponent<JSX.KritzelLineEndings>;
+export declare const KritzelLoginDialog: StencilVueComponent<JSX.KritzelLoginDialog>;
+export declare const KritzelMasterDetail: StencilVueComponent<JSX.KritzelMasterDetail>;
+export declare const KritzelNumericInput: StencilVueComponent<JSX.KritzelNumericInput>;
+export declare const KritzelOpacitySlider: StencilVueComponent<JSX.KritzelOpacitySlider>;
+export declare const KritzelPillTabs: StencilVueComponent<JSX.KritzelPillTabs>;
+export declare const KritzelSettings: StencilVueComponent<JSX.KritzelSettings>;
