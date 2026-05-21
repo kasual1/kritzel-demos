@@ -5,7 +5,7 @@ import { MultiEditorPage } from "./pages/MultiEditorPage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<EditorPage />} />
         <Route path="/multi-editor" element={<MultiEditorPage />} />
