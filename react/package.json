@@ -10,7 +10,7 @@
     "build-app": "vite build"
   },
   "dependencies": {
-    "kritzel-react": "file:../local-libs/kritzel-react",
+    "kritzel-react": "file:./local-libs/kritzel-react",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-router-dom": "^7.15.1"
