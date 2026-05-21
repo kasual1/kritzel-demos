@@ -1,18 +1,19 @@
 import "./App.css";
-import { HashRouter, NavLink, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { EditorPage } from "./pages/EditorPage";
 import { MultiEditorPage } from "./pages/MultiEditorPage";
+import { CustomToolbar1Page } from "./pages/CustomToolbar1Page";
+import { CustomToolbar2Page } from "./pages/CustomToolbar2Page";
 
 function App() {
   return (
     <HashRouter>
-      <nav style={{ display: "flex", gap: "16px", padding: "12px 24px", borderBottom: "1px solid #e5e7eb" }}>
-        <NavLink to="/" end style={({ isActive }) => ({ fontWeight: isActive ? 700 : 400 })}>Editor</NavLink>
-        <NavLink to="/multi-editor" style={({ isActive }) => ({ fontWeight: isActive ? 700 : 400 })}>Multi Editor</NavLink>
-      </nav>
       <Routes>
-        <Route path="/" element={<EditorPage />} />
-        <Route path="/multi-editor" element={<MultiEditorPage />} />
+        <Route path="/" element={<Navigate to="/e2e" replace />} />
+        <Route path="/e2e" element={<EditorPage />} />
+        <Route path="/e2e/multi-editor" element={<MultiEditorPage />} />
+        <Route path="/examples/custom-toolbar-1" element={<CustomToolbar1Page />} />
+        <Route path="/examples/custom-toolbar-2" element={<CustomToolbar2Page />} />
       </Routes>
     </HashRouter>
   );
