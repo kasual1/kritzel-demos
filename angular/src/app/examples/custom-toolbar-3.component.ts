@@ -7,7 +7,7 @@ import {
 } from 'kritzel-angular';
 
 @Component({
-  selector: 'app-custom-toolbar-2',
+  selector: 'app-custom-toolbar-3',
   imports: [KritzelEditor],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: ` <kritzel-editor [controls]="controls"></kritzel-editor> `,
@@ -18,7 +18,7 @@ import {
     }
   `,
 })
-export class CustomToolbar2Component {
+export class CustomToolbar3Component {
   controls: KritzelToolbarControl[] = [
     {
       name: 'selection',
@@ -31,7 +31,22 @@ export class CustomToolbar2Component {
       type: 'tool',
       tool: KritzelBrushTool,
       icon: 'pen',
-      isDefault: true
+      isDefault: true,
+      config: {
+        type: 'pen',
+        color: { light: '#000000', dark: '#ffffff' },
+        size: 24,
+        sizes: {
+          pen: [24, 16, 8]
+        },
+        palettes: {
+          pen: [
+            { light: '#000000', dark: '#ffffff', label: 'Black' },
+            { light: '#e53935', dark: '#e53935', label: 'Red' },
+            { light: '#1a73e8', dark: '#1a73e8', label: 'Blue' },
+          ],
+        },
+      },
     },
     {
       name: 'config',
