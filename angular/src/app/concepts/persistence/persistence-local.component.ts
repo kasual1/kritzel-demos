@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, ViewChild } from '@angular/core';
 import {
   KritzelEditor,
-  BroadcastSyncProvider,
+  IndexedDBSyncProvider,
   KritzelSyncConfig,
   EditorIsReadyEvent,
 } from 'kritzel-angular';
@@ -15,8 +15,8 @@ import { createSeedObjects } from '../../const/seed-objects';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="toolbar">
-      <span class="label">Cross-tab Sync</span>
-      <span class="status">BroadcastChannel enabled</span>
+      <span class="label">Persistence Provider:</span>
+      <span class="status">IndexedDB enabled</span>
     </div>
     <div class="editor-wrap">
       <kritzel-editor
@@ -44,7 +44,7 @@ import { createSeedObjects } from '../../const/seed-objects';
         height: 100%;
         font-family: Roboto, sans-serif;
         color: var(--angular-text);
-        background: linear-gradient(160deg, #fff3f6 0%, #ffffff 46%);
+        background: linear-gradient(180deg, #fff8f9 0%, #ffffff 100%);
       }
 
       .toolbar {
@@ -62,6 +62,26 @@ import { createSeedObjects } from '../../const/seed-objects';
         font-size: 13px;
         color: var(--angular-primary);
         letter-spacing: 0.2px;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        cursor: pointer;
+        padding: 4px 8px;
+        border: 1px solid var(--angular-border);
+        border-radius: 999px;
+        transition:
+          border-color 140ms ease,
+          background-color 140ms ease;
+        background: #fff;
+      }
+
+      label:hover {
+        border-color: var(--angular-primary);
+        background: #fff5f7;
       }
 
       .status {
@@ -86,7 +106,7 @@ export class CollaborationLocalComponent {
   themes = [angularThemeLight, angularThemeDark];
 
   syncConfig: KritzelSyncConfig = {
-    providers: [BroadcastSyncProvider],
+    providers: [IndexedDBSyncProvider],
   };
 
   async onReady(_event: CustomEvent<EditorIsReadyEvent>) {
