@@ -10,7 +10,7 @@
     "build-app": "vite build"
   },
   "dependencies": {
-    "kritzel-react": "^0.3.33",
+    "kritzel-react": "^0.3.34",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-router-dom": "^7.15.1"
